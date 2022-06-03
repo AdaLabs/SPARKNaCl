@@ -890,6 +890,13 @@ is
       PK.F := PK_Raw;
    end PK_From_Bytes;
 
+   procedure SK_From_Bytes (SK_Raw : in     Bytes_64;
+                            SK     :    out Signing_SK)
+   is
+   begin
+      SK.F := SK_Raw;
+   end SK_From_Bytes;
+
    procedure Sign (SM :    out Byte_Seq;
                    M  : in     Byte_Seq;
                    SK : in     Signing_SK)
